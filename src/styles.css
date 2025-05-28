@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   padding: 0;
   margin: 0;
@@ -9,6 +13,15 @@ html {
 body {
   background: #eee;
   position: relative;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-grow: row wrap;
+}
+.wrapper > * {
+  flex: 1 100%;
 }
 
 header {
@@ -24,13 +37,15 @@ header h1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
+  font-size: 32px;
 }
-
-footer {
+.page-wrap {
   position: relative;
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
+}
+footer {
   text-align: center;
-  float: left;
-  width: 100%;
   height: 2.5rem;
 }
 

@@ -20,23 +20,23 @@ export default function App() {
     });
   };
   return (
-    <div className="App">
-      <Header />
-      <CreateArea onAdd={addNote} />
-      <div className="notes">
-      {note.map((noteItem, index) => {
-        return (
-          <Note
-            key={index}
-            id={index}
-            title={noteItem.title}
-            content={noteItem.content}
-            onDelete={deleteNote}
-          />
-        );
-      })}
-      </div>
-      <Footer />
+    <div className="App min-h-screen flex flex-col">
+        <Header />
+        <CreateArea onAdd={addNote} />
+        <div className="notes flex-grow max-w-6xl mx-auto">
+              {note.map((noteItem, index) => {
+                return (
+                  <Note
+                    key={index}
+                    id={index}
+                    title={noteItem.title}
+                    content={noteItem.content}
+                    onDelete={deleteNote}
+                  />
+                );
+              })}
+        </div>
+        <Footer />
     </div>
   );
 }

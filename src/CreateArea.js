@@ -33,7 +33,7 @@ export default function CreateArea(props) {
     event.preventDefault();
   };
   return (
-    <div>
+    <div className="flex-grow max-w-6xl mx-auto">
       <form className="create-note">
         <input
           name="title"
